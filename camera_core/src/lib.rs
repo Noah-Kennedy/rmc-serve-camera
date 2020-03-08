@@ -9,5 +9,3 @@ pub mod error;
 pub mod capture;
 
 pub mod logging;
-
-pub mod capture_state;

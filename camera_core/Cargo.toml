@@ -14,13 +14,10 @@ features = ["no_wrapper"]
 [dependencies.image]
 version = "0.23.0"
 default-features = false
+features = ["jpeg"]
 
 [dependencies.log]
 version = "0.4.8"
 
 [dependencies.env_logger]
 version = "0.7.1"
-
-[dependencies.actix-web]
-version = "2.0"
-default-features = false
