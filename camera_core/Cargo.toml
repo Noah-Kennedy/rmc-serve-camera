@@ -1,0 +1,16 @@
+[package]
+name = "camera_core"
+version = "0.1.0"
+authors = ["noah <nomaxx117@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+[dependencies.rscam]
+version = "0.5.5"
+default-features = false
+features = ["no_wrapper"]
+
+[dependencies.image]
+version = "0.23.0"
+default-features = false
