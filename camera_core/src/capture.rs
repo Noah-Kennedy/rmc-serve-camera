@@ -1,3 +1,5 @@
+//! Vendored from [camera_capture](https://github.com/Noah-Kennedy/camera_capture)
+
 use std::default::Default;
 
 use crate::error::Error;
@@ -26,8 +28,15 @@ impl Iterator for ImageIterator {
     type Item = image::ImageBuffer<image::Rgb<u8>, Frame>;
     fn next(&mut self) -> Option<Self::Item> {
         match self.camera.capture() {
-            Ok(frame) => image::ImageBuffer::from_raw(frame.resolution.0, frame.resolution.1, frame),
-            Err(_) => None,
+            Ok(frame) => {
+                image::ImageBuffer::from_raw(
+                    frame.resolution.0,
+                    frame.resolution.1,
+                    frame)
+            }
+            Err(e) => {
+                None
+            },
         }
     }
 }

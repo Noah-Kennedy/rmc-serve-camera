@@ -1,7 +1,13 @@
-//! Vendored from [camera_capture](https://github.com/Noah-Kennedy/camera_capture)
+#[macro_use]
+extern crate log;
 
 pub use image;
 
 pub mod error;
 
-pub mod linux;
+/// This only works in Linux!
+pub mod capture;
+
+pub mod logging;
+
+pub mod capture_state;
